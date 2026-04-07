@@ -1,0 +1,158 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* App Background */
+.app {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f0f2f5;
+}
+
+.app.dark {
+  background: #121212;
+  color: white;
+}
+
+/* Card */
+.card {
+  width: 90%;
+  max-width: 380px;
+  padding: 20px;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.app.dark .card {
+  background: #1e1e1e;
+}
+
+/* HERO IMAGE */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Overlay */
+.overlay {
+  position: absolute;
+  bottom: 10px;
+  left: 15px;
+  color: white;
+}
+
+.overlay h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.overlay p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.header button {
+  border: none;
+  background: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Toggle */
+.toggle {
+  margin: 10px 0;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Week Row */
+.week {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  font-weight: bold;
+}
+
+.week-day {
+  padding: 5px;
+  color: #555;
+}
+
+.app.dark .week-day {
+  color: #ccc;
+}
+
+/* Calendar */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  margin: 15px 0;
+}
+
+/* Days */
+.day {
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.day:hover {
+  background: #ddd;
+}
+
+/* Selected */
+.selected {
+  background: #4caf50;
+  color: white;
+}
+
+/* Today */
+.today {
+  border: 2px solid red;
+}
+
+/* Notes */
+textarea {
+  width: 100%;
+  height: 80px;
+  border-radius: 10px;
+  padding: 10px;
+  border: none;
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+  .day {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  textarea {
+    height: 60px;
+  }
+}
